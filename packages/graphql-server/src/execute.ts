@@ -73,8 +73,8 @@ const rootValue = {
 const execute = async (
   body: { query: string; variables: Record<string, unknown> },
   env: AppEnv
-) => {
-  const res = await graphql({
+) =>
+  graphql({
     schema,
     source: body.query,
     variableValues: body.variables,
@@ -83,6 +83,5 @@ const execute = async (
       kv: env.GRAPHQL_DATA,
     },
   });
-};
 
 export default execute;

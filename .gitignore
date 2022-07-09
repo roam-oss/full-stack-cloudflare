@@ -3,3 +3,4 @@ node_modules
 .turbo
 apps/example/.turbo packages/graphql-server/.turbo
 .npmrc
+packages/*/lib
