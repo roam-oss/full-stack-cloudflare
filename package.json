@@ -1,15 +1,18 @@
 {
   "name": "@roam-oss/full-stack-cloudflare",
   "version": "0.0.1",
+  "workspaces": {
+    "packages": ["packages/**", "apps/**"]
+  },
   "main": "index.js",
   "repository": "https://github.com/roam-oss/full-stack-cloudflare.git",
   "author": "Ben Bergstein <bennyjbergstein@gmail.com>",
   "license": "MIT",
-  "packageManager": "pnpm@7.0.1",
   "private": true,
   "scripts": {
     "lint": "pnpm eslint",
-    "build": "pnpm turbo run build"
+    "build": "yarn turbo run build",
+    "preinstall": "node is-pages && mv .npmrc.pages .npmrc || echo \"Not Pages\""
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.30.5",
