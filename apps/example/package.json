@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@roam-oss/graphql-server": "^0.0.2",
+    "@roam-oss/graphql-server": "^0.0.3",
     "functions": "^1.0.9"
   }
 }

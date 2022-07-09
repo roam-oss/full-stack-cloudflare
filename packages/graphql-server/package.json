@@ -1,6 +1,6 @@
 {
   "name": "@roam-oss/graphql-server",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "repository": "https://github.com/roam-oss/full-stack-cloudflare.git",
@@ -18,12 +18,12 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.14.0",
-    "typescript": "^4.7.4",
     "@graphql-codegen/cli": "2.8.0",
     "@graphql-codegen/introspection": "2.2.0",
     "@graphql-codegen/typescript": "2.7.1",
     "@graphql-codegen/typescript-resolvers": "2.7.1",
+    "@types/node": "^18.0.3",
     "@types/uuid": "^8.3.4",
-    "@types/node": "^18.0.3"
+    "typescript": "^4.7.4"
   }
 }

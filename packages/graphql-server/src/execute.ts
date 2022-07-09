@@ -21,10 +21,14 @@ const schema = buildSchema(schemaSource);
 //   return results;
 // };
 
-// const get = async (kv, type, id) => {
-//   const data = await kv.get(`${type}:record:${id}`);
-//   return JSON.parse(data);
-// };
+const get = async (
+  kv: GraphQLKVNamespace<ObjectRecordKeyType>,
+  type: ObjectType,
+  id: string
+) => {
+  const data = await kv.get(`${type}:record:${id}`);
+  return JSON.parse(data);
+};
 
 const put = async (
   kv: GraphQLKVNamespace<ObjectRecordKeyType>,
@@ -47,7 +51,7 @@ const put = async (
 
 // The rootValue provides a resolver function for each API endpoint
 const queryResolvers: QueryResolvers<{ kv: GraphQLKVNamespace }> = {
-  // getObject: async (_parent, { id, type }, { kv }) => get(kv, type, id),
+  getObject: async (_parent, { id, type }, { kv }) => get(kv, type, id),
   // allObjects: async ({ type }, { kv }) => all(kv, type),
   // allPlaylist: async (_, { kv }) => all(kv, "playlist"),
   // getPlaylist: async ({ playlistId }, { kv }) =>
