@@ -1,6 +1,6 @@
 {
   "name": "@roam-oss/graphql-server",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "repository": "https://github.com/roam-oss/full-stack-cloudflare.git",
@@ -9,6 +9,7 @@
   "private": false,
   "scripts": {
     "build": "pnpm tsc",
+    "release": "yarn publish",
     "generate:gql": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {

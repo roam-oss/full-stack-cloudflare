@@ -1,6 +1,6 @@
 {
   "name": "@roam-oss/full-stack-cloudflare",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "workspaces": {
     "packages": [
       "packages/**",
@@ -15,6 +15,7 @@
   "scripts": {
     "lint": "pnpm eslint",
     "build": "yarn turbo run build",
+    "release": "yarn turbo run release",
     "preinstall": "node is-pages && mv .npmrc.pages .npmrc || echo \"Not Pages\""
   },
   "devDependencies": {
