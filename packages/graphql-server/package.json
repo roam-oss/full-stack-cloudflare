@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "pnpm tsc",
+    "build": "yarn tsc",
     "release": "yarn publish",
     "generate:gql": "graphql-codegen --config codegen.yml"
   },
