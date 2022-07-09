@@ -1,0 +1,9 @@
+{
+  "name": "@roam-oss/graphql-server",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/roam-oss/full-stack-cloudflare.git",
+  "author": "Ben Bergstein <bennyjbergstein@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
