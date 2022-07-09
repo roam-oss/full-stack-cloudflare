@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "esnext",
+    "lib": ["esnext", "webworker"],
+    "outDir": "lib",
+    "typeRoots": ["node_modules/@types"],
+    "types": ["@cloudflare/workers-types", "@types/node"],
+    "skipLibCheck": true
+  },
+  "extends": "../../tsconfig.json",
+  "include": ["src/**/*", "./src/global.d.ts"]
+}

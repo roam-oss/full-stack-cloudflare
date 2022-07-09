@@ -1,9 +1,30 @@
 {
   "name": "@roam-oss/graphql-server",
   "version": "0.0.1",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "repository": "https://github.com/roam-oss/full-stack-cloudflare.git",
   "author": "Ben Bergstein <bennyjbergstein@gmail.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "build": "pnpm tsc",
+    "generate:gql": "graphql-codegen --config codegen.yml"
+  },
+  "dependencies": {
+    "@cloudflare/workers-types": "^3.14.0",
+    "@graphql-codegen/cli": "^2.8.0",
+    "@types/uuid": "^8.3.4",
+    "graphql": "^16.5.0",
+    "graphql-request": "^4.3.0",
+    "typescript": "^4.7.4",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.3",
+    "@graphql-codegen/typescript": "2.7.1",
+    "@graphql-codegen/typescript-resolvers": "2.7.1",
+    "@graphql-codegen/introspection": "2.2.0",
+    "@graphql-codegen/cli": "2.8.0"
+  }
 }
