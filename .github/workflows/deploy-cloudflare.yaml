@@ -1,0 +1,14 @@
+name: Deploy to Cloudflare
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "17.x"
+      - run: yarn global add wrangler
+      - run: |
+        cd apps/example && wrangler pages publish --project full-stack-cloudflare
